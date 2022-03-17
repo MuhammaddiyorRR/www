@@ -1,0 +1,242 @@
+.none1{
+  display: none;
+  @media(max-width:575px){
+    display: block;
+  }
+}
+.aboutus {
+  @include flex;
+  .text {
+    @include flex-column;
+    gap: 30px;
+    span {
+      @extend %_48;
+      color: #000000;
+    }
+    .info {
+      width: 82%;
+      @extend %info;
+    }
+    .nums {
+      display: flex;
+      gap: 144px;
+      .num {
+        @include flex_column;
+        justify-content: center;
+        align-items: center;
+        span {
+          @extend %_48;
+          color: #2a3246;
+        }
+        p {
+          @extend %info;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1400px) {
+    & {
+      @include flex;
+      .text {
+        @include flex-column;
+        gap: 30px;
+        span {
+          // @extend %_48;
+          color: #000000;
+          font-size: 36px;
+        }
+        .info {
+          width: 82%;
+          // @extend %info;
+          font-size: 18px;
+          line-height: 24px;
+        }
+        .nums {
+          display: flex;
+          gap: 95px;
+          .num {
+            span {
+              // @extend %_48;
+              color: #2a3246;
+              font-size: 40px;
+              line-height: 80px;
+            }
+            p {
+              // @extend %info;
+              font-size: 18px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+      .image{
+          img{
+              width: 430px;
+          }
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    & {
+      @include flex;
+      .text {
+        @include flex-column;
+        gap: 30px;
+        span {
+          @extend %_48;
+          color: #000000;
+          font-size: 36px;
+        }
+        .info {
+          width: 82%;
+          @extend %info;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .nums {
+          display: flex;
+          gap: 70px;
+          .num {
+            span {
+              @extend %_48;
+              color: #2a3246;
+              font-size: 30px;
+              line-height: 80px;
+            }
+            p {
+              @extend %info;
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+      .image{
+          img{
+              width: 336px;
+          }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    & {
+      .text {
+        gap: 15px;
+        span {
+          color: #000000;
+          font-size: 30px;
+        }
+        .info {
+          width: 82%;
+          font-size: 14px;
+          line-height: 21px;
+        }
+        .nums {
+          display: flex;
+          gap: 30px;
+          .num {
+            span {
+              color: #2a3246;
+              font-size: 22px;
+              line-height: 60px;
+            }
+            p {
+              font-size: 13px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+      .image{
+          img{
+              width: 280px;
+          }
+      }
+    }
+  }
+  
+  @media (max-width:575px) {
+    
+    & {
+      flex-direction: column-reverse;
+      .text {
+        justify-content: center;
+        align-items: center;  
+        gap: 15px;
+        span {
+          display: none;
+        }
+        .info {
+          width: 82%;
+          font-size: 14px;
+          line-height: 21px;
+          text-align: center;
+        }
+        .nums {
+          display: flex;
+          gap: 50px;
+          .num {
+            span {
+              color: #2a3246;
+              font-size: 24px;
+              line-height: 60px;
+              display: block;
+            }
+            p {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+      .image{
+          img{
+              width: 280px;
+          }
+      }
+    }
+  }
+  @media (max-width:375px) {
+    & {
+      flex-direction: column-reverse;
+      .text {
+        justify-content: center;
+        align-items: center;  
+        gap: 15px;
+        span {
+          display: none;
+        }
+        .info {
+          width: 82%;
+          font-size: 13px;
+          line-height: 21px;
+          text-align: center;
+        }
+        .nums {
+          display: flex;
+          flex-direction: column;
+
+          gap: 30px;
+          .num {
+            span {
+              color: #2a3246;
+              font-size: 24px;
+              line-height: 60px;
+              display: block;
+            }
+            p {
+              font-size: 13px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+      .image{
+          img{
+              width: 280px;
+          }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+$light_color: #fff;
+$primary_color: #000;
+$secondary_color: #262626;
+$color_333: #263238;
+$color_444: #546269;
+$color_555: #8f95a5;
+$price_color: #eeeeee;
+$hover_bg: #fc699a;
+$hover_color: #cfefff;
+
+// @include grid($colums, $fr) {
+//     display: grid;
+//     grid-template-columns: repeat($columns, $fr);
+
+// }
+
+// $colors{
+
+// }
+
+%_48 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 167%;
+}
+
+%info {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #8f95a5;
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}

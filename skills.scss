@@ -1,0 +1,545 @@
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "speaking writing reading"
+    "speaking listening listening";
+  gap: 18px;
+  .box {
+    @include flex_column;
+    gap: 40px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 45px;
+    box-sizing: border-box;
+    .image {
+      img {
+        width: 100%;
+      }
+    }
+    .text {
+      @include flex_column;
+      gap: 35px;
+      span {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 28px;
+        color: #263238;
+      }
+      p {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #8f95a5;
+      }
+      .btn {
+        margin-top: 30px;
+        a {
+          padding: 17px 63px;
+          color: #fff;
+          background: #263238;
+          border-radius: 5px;
+          &:hover {
+            color: #263238;
+            background: #fff;
+            outline: 2px solid #262626;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      background: #fc699a;
+      span {
+        color: #fff;
+      }
+      p {
+        color: #cfefff;
+      }
+    }
+
+    &:first-child {
+      padding: 75px 45px 45px 45px;
+    }
+    &:last-child {
+      flex-direction: row;
+      .image {
+        width: 150%;
+        @include flex;
+      }
+    }
+    &:nth-child(2) {
+      padding: 33px 45px 45px 45px;
+      .image {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    &:nth-child(3) {
+      padding: 33px 45px 45px 45px;
+    }
+  }
+  // .img1 {
+  //   width: 315px;
+  // }
+  // .img2 {
+  //   width: 240px;
+  // }
+  // .img3 {
+  //   width: 250px;
+  // }
+  // .img4 {
+  //   width: 382px;
+  // }
+  @media (max-width: 1050px) {
+    .box {
+      .text {
+        .btn {
+          a {
+            padding: 17px 56px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    & {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "speaking writing reading"
+        "speaking listening listening";
+      gap: 18px;
+      .box {
+        @include flex_column;
+        gap: 30px;
+        padding: 28px;
+        .text {
+          @include flex_column;
+          gap: 20px;
+          span {
+            font-size: 22px;
+            line-height: 28px;
+            color: #263238;
+          }
+          p {
+            font-size: 14px;
+            line-height: 21px;
+            color: #8f95a5;
+          }
+          .btn {
+            margin-top: 30px;
+            a {
+              padding: 16px 41px;
+
+              &:hover {
+                color: #263238;
+                background: #fff;
+                outline: 2px solid #262626;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          background: #fc699a;
+          span {
+            color: #fff;
+          }
+          p {
+            color: #cfefff;
+          }
+        }
+
+        &:first-child {
+          padding: 35px 28px 28px 28px;
+        }
+        &:last-child {
+          flex-direction: row;
+          padding: 28px 28px 50px 28px;
+        }
+        &:nth-child(2) {
+          padding: 30px 28px 28px 28px;
+          .image {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+        &:nth-child(3) {
+          padding: 28px 26px 50px 26px;
+        }
+      }
+      // .img1 {
+      //   width: 220px;
+      // }
+      // .img2 {
+      //   width: 170px;
+      // }
+      // .img3 {
+      //   width: 210px;
+      // }
+      // .img4 {
+      //   width: 254px;
+      // }
+    }
+  }
+
+  @media (max-width: 767px) {
+    & {
+      gap: 15px;
+      .box {
+        @include flex_column;
+        gap: 20px;
+        padding: 18px;
+        .text {
+          @include flex_column;
+          gap: 20px;
+          span {
+            font-size: 22px;
+            line-height: 28px;
+            color: #263238;
+          }
+          p {
+            font-size: 14px;
+            line-height: 21px;
+            color: #8f95a5;
+          }
+          .btn {
+            margin-top: 30px;
+            a {
+              padding: 16px 37px;
+
+              &:hover {
+                color: #263238;
+                background: #fff;
+                outline: 2px solid #262626;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          background: #fc699a;
+          span {
+            color: #fff;
+          }
+          p {
+            color: #cfefff;
+          }
+        }
+
+        &:first-child {
+          padding: 35px 28px 28px 28px;
+        }
+        &:last-child {
+          flex-direction: row;
+          padding: 28px 28px 50px 28px;
+        }
+        &:nth-child(2) {
+          padding: 30px 28px 28px 28px;
+          .image {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+        &:nth-child(3) {
+          padding: 28px 26px 50px 26px;
+        }
+      }
+      // .img1 {
+      //   width: 185px;
+      // }
+      // .img2 {
+      //   width: 160px;
+      // }
+      // .img3 {
+      //   width: 170px;
+      // }
+      // .img4 {
+      //   width: 202px;
+      // }
+    }
+  }
+
+  .speaking {
+    grid-area: speaking;
+  }
+  .writing {
+    grid-area: writing;
+  }
+  .reading {
+    grid-area: reading;
+  }
+  .listening {
+    grid-area: listening;
+  }
+
+  @media (max-width: 700px) {
+    & {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "speaking writing"
+        "reading listening";
+      gap: 20px;
+      .box {
+        &:last-child {
+          flex-direction: column-reverse;
+          .image {
+            width: 100%;
+          }
+        }
+        .text {
+          .btn {
+            a {
+              padding: 13px 54px;
+            }
+          }
+        }
+        &:not(:first-child) {
+          .text {
+            .height {
+              height: 234px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    & {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "speaking writing"
+        "reading listening";
+      gap: 20px;
+      .box {
+        @include flex_column;
+        gap: 20px;
+        padding: 18px;
+        &:not(:first-child) {
+          .text {
+            .height {
+              height: 234px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+          }}
+          .text {
+            @include flex_column;
+            justify-content: space-between;
+            gap: 20px;
+            span {
+              font-size: 18px;
+              line-height: 28px;
+              color: #263238;
+            }
+
+            p {
+              font-size: 12px;
+              line-height: 18px;
+              color: #8f95a5;
+            }
+            .btn {
+              margin-top: 30px;
+              display: flex;
+              justify-content: center;
+              a {
+                padding: 14px 45px;
+
+                &:hover {
+                  color: #263238;
+                  background: #fff;
+                  outline: 2px solid #262626;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            background: #fc699a;
+            span {
+              color: #fff;
+            }
+            p {
+              color: #cfefff;
+            }
+          }
+
+          &:first-child {
+            padding: 13px 21px 35px 21px;
+          }
+          &:last-child {
+            flex-direction: column-reverse;
+
+            padding: 28px 21px 35px 21px;
+            // .image {
+            // img {
+            // width: 202px;
+            // }
+          }
+        // }
+        &:nth-child(2) {
+          padding: 25px 21px 35px 21px;
+          .image {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+        &:nth-child(3) {
+          padding: 22px 21px 35px 21px;
+        }
+        &:not(:first-child) {
+          .text {
+            .height {
+              height: 257px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+    .img1 {
+      width: 180px;
+    }
+    .img2 {
+      width: 180px;
+    }
+    .img3 {
+      width: 198px;
+    }
+    .img4 {
+      width: 170px;
+    }
+  }
+}
+@media (max-width: 410px) {
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "speaking "
+      "writing"
+      "reading "
+      "listening";
+    gap: 20px;
+    .box {
+      @include flex_column;
+      gap: 20px;
+      padding: 18px;
+      .text {
+        @include flex_column;
+        justify-content: space-between;
+        gap: 20px;
+        span {
+          font-size: 18px;
+          line-height: 28px;
+          color: #263238;
+        }
+
+        p {
+          font-size: 13px;
+          line-height: 20px;
+          color: #8f95a5;
+        }
+        .btn {
+          margin-top: 30px;
+          display: flex;
+          justify-content: flex-start;
+          a {
+            font-size: 14px;
+            padding: 13px 43px;
+
+            &:hover {
+              color: #263238;
+              background: #fff;
+              outline: 2px solid #262626;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        background: #fc699a;
+        span {
+          color: #fff;
+        }
+        p {
+          color: #cfefff;
+        }
+      }
+
+      &:first-child {
+        padding: 13px 21px 35px 21px;
+      }
+      &:last-child {
+        flex-direction: column-reverse;
+
+        padding: 28px 21px 35px 21px;
+        // .image {
+        // img {
+        // width: 202px;
+        // }
+      }
+      // }
+      &:nth-child(2) {
+        padding: 25px 21px 35px 21px;
+        .image {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+      &:nth-child(3) {
+        padding: 22px 21px 35px 21px;
+      }
+      &:not(:first-child) {
+        .text {
+          .height {
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+    .img1 {
+      width: 180px;
+    }
+    .img2 {
+      width: 180px;
+    }
+    .img3 {
+      width: 198px;
+    }
+    .img4 {
+      width: 170px;
+    }
+  }
+}
+// }
+
+.speaking {
+  grid-area: speaking;
+}
+.writing {
+  grid-area: writing;
+}
+.reading {
+  grid-area: reading;
+}
+.listening {
+  grid-area: listening;
+}
+// }

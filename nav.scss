@@ -1,0 +1,118 @@
+.nav {
+  @include flex1;
+  padding-top: 55px;
+  .logo {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+    color: #000000;
+    span {
+      color: #8f95a5;
+    }
+  }
+  ul {
+    @include flex;
+    gap: 40px;
+    li {
+      list-style: none;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #263238;
+    }
+  }
+  a {
+    padding: 17px 57px;
+    border: 2px solid #263238;
+    border-radius: 5px;
+    &:hover {
+      color: #fff;
+      background: #263238;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .nav {
+      @include flex1;
+      padding-top: 25px;
+      .logo {
+        font-size: 30px;
+        line-height: 45px;
+        color: #000000;
+        span {
+          color: #8f95a5;
+        }
+      }
+      ul {
+        @include flex;
+        gap: 40px;
+        li {
+          font-size: 16px;
+          line-height: 24px;
+          color: #263238;
+        }
+      }
+      a {
+        padding: 12px 40px;
+        border: 2px solid #263238;
+        border-radius: 5px;
+        &:hover {
+          color: #fff;
+          background: #263238;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    & {
+      @include flex1;
+      padding-top: 40px;
+      .logo {
+        font-size: 30px;
+        line-height: 45px;
+        color: #000000;
+        span {
+          color: #8f95a5;
+        }
+      }
+      ul {
+        display: none;
+        li {
+          display: none;
+        }
+      }
+      
+    }
+  }
+  @media (max-width: 767px) {
+    & {
+      @include flex1;
+      padding-top: 40px;
+      .logo {
+        font-size: 30px;
+        line-height: 45px;
+        color: #000000;
+        span {
+          color: #8f95a5;
+        }
+      }
+      ul {
+        display: none;
+        li {
+          display: none;
+        }
+      }
+      a {
+        display: none;
+      }
+      .menu{
+        display: block;
+      }
+    }
+  }
+}
